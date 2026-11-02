@@ -18,8 +18,6 @@ PRODUCT_HARDWARE := barbet
 
 USES_QCT_MODEM := true
 
-DEVICE_PACKAGE_OVERLAYS += device/google/barbet/barbet/overlay
-
 PRODUCT_DEVICE_SVN_OVERRIDE := true
 
 include device/google/redbull/device-common.mk
@@ -167,8 +165,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-3.9.1-vendorcompat
 
+# Device specific RROs
 PRODUCT_PACKAGES += \
-    NfcOverlayBarbet
+    FrameworkResOverlayBarbet \
+    NfcOverlayBarbet \
+    SecureElementOverlayBarbet \
+    SettingsOverlayBarbet \
+    SystemUIOverlayBarbet
 
 # Set soong config variable to control module build
 $(call soong_config_set,ctpm,enable_nr_dual_connectivity_qcril,true)
