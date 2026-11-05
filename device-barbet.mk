@@ -115,10 +115,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init.insmod.barbet.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/init.insmod.barbet.cfg
 
-# Recovery
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init.recovery.device.rc:recovery/root/init.recovery.barbet.rc
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/powerhint_$(PRODUCT_HARDWARE).json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint_$(PRODUCT_HARDWARE).json
 
